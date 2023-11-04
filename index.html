@@ -37,11 +37,61 @@
                     <img src="images/user.png">
                 </div>
                 <div class="about-col-2">
-                    <h1>About Me</h1>
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I am a passionate tech enthusiast with a love for exploring cutting-edge technologies. As a skilled Go(lang) backend developer, I specialize in building robust and scalable applications. My expertise also extends to the world of DevOps, where I thrive in automating processes and ensuring seamless deployment. In addition to my tech endeavors, I enjoy diving into literature, practicing photography, and fostering a love for lifelong learning.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Devops</span><br>Enabling Agile Software Deployment.</li>
+                            <li><span>Backend</span><br>Developing Scalable Go Applications.</li>
+                            <li><span>Languages</span><br>Python, C/C++, Go(lang), Java.</li>
+                            <li><span>Tools</span><br>Docker, AWS, Terraform, Jenkins(L), Ansible(L).</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>OODP project</span><br>Implemented watershedding algorithm to find tumor region in an MRI image.</li>
+                            <li><span>APP project</span><br>Built a GUI interface for encryption and Decryption of Texts.</li>
+                            <li><span>PPS project</span><br>Built a Retro Snake Game.</li>
+                            <li><span>GO Backend</span><br>Developing a Backend service for Restaurant Management(UnderDevelopment).</li>
+                            <li><span>Devops</span><br>Worked and learnt few of Devops Tools.</li>
+                            <li><span>AWS</span><br>I have Decent amount of knowledge and Practice in AWS.</li>
+                            <li><span>Hackerrank</span><br>6 Badges.</li>
+                            <li><span>Certifications</span><br>Certifications in local Workshops and Hackkathons.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022</span><br>Passed out 12th at Edustar International School with 85% (PCM).</li>
+                            <li><span>2022-26</span><br>Doing 2ndyr Undergrad at SRM University in CSE Cloud Computing with CGPA 8.74(until 1st yr).</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
 </body>
 </html>
